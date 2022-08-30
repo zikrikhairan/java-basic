@@ -58,7 +58,7 @@ public class Main {
     }
 
     private static List<String> convertStringArrayToStringList(String[] stringArray){
-        return Arrays.stream(stringArray).toList();
+        return Arrays.asList(stringArray);
     }
 
     private static String[] convertStringListToStringArray(List<String> stringList){
