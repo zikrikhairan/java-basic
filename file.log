@@ -1,0 +1,12 @@
+[1, 2, 3, 4]
+[1, 2, 3, 4]
+
+[A, B, C, D]
+[A, B, C, D]
+
+{A=true, B=true, C=true, D=true}
+[A, B, C, D]
+
+{1=com.zikrikhairan.Car@34c45dca, 2=com.zikrikhairan.Car@52cc8049}
+[com.zikrikhairan.Car@34c45dca, com.zikrikhairan.Car@52cc8049]
+
