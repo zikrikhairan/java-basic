@@ -9,6 +9,13 @@ import java.util.stream.Collectors;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         try(PrintWriter printWriter = new PrintWriter("file.log")){
+            printWriter.println(isPrime(1));
+            printWriter.println(isPrime(2));
+            printWriter.println(isPrime(3));
+            printWriter.println(isPrime(4));
+            printWriter.println(isPrime(5));
+            printWriter.println(isPrime(6));
+            printWriter.println(isPrime(7));
             int[] intArray = {1,2,3,4};
             printWriter.println(convertIntArrayToIntegerList(intArray));
             List<Integer> integerList = new ArrayList<>();
@@ -79,6 +86,25 @@ public class Main {
 
     private static List<Car> convertIntegerCarMapToCarList(Map<Integer, Car> carMap){
         return  new ArrayList<>(carMap.values());
+    }
+
+    public static boolean isPrime(int n)
+    {
+        // Check if n=2 or n=3
+        if (n == 2 || n == 3)
+            return true;
+
+        // Check whether n is divisible by 2 or 3
+        if (n < 2 || n % 2 == 0 || n % 3 == 0)
+            return false;
+
+        // Check from 5 to square root of n
+        // Iterate i by (i+6)
+        for (int i = 5; i <= Math.sqrt(n); i = i + 6)
+            if (n % i == 0 || n % (i + 2) == 0)
+                return false;
+
+        return true;
     }
 }
 
